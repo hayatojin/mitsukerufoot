@@ -1,0 +1,422 @@
+header {
+}
+
+.gnav {/*ドロップダウンメニュー*/
+    display: flex;
+    height: 2rem;
+    margin: 0 auto;
+    width: 800px;
+}
+.gnav > li {/*親階層のみ幅を25%にする*/
+    width: 25%;
+}
+/*全てのリスト・リンク共通*/
+.gnav li {
+    list-style: none;
+    position: relative;
+}
+.gnav li a {
+    background: #55C501;
+    border-right: 1px solid #eee;
+    color: #fff;
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.gnav li li {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+.gnav li li a {
+    border-top: 1px solid #eee;
+}
+.gnav li:hover > ul > li {
+    height: 2rem;
+    overflow: visible;
+}
+
+footer {
+position: relative;
+width: 100%;
+/* Set the fixed height of the footer here */
+background-color: #f5f5f5;
+bottom: 0;
+}
+
+#modal-content{/*モーダルウィンドウ*/
+	width:50%;
+	margin:1.5em auto 0;
+	padding:10px 20px;
+	border:2px solid #aaa;
+	background:#fff;
+	z-index:2;
+	position:fixed;
+}
+
+.modal-p{
+	margin-top:1em;
+}
+
+.modal-p:first-child{
+	margin-top:0;
+}
+
+.button-link{
+	color:#00f;
+	text-decoration:underline;
+}
+ 
+.button-link:hover{
+	cursor:pointer;
+	color:#f00;
+}
+
+#modal-overlay{/*モーダルウィンドウ*/
+	z-index:1;
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:120%;
+	background-color:rgba(0,0,0,0.75);
+}
+
+.game_detail{
+    height:100%;
+}
+
+body > .container {
+padding: 20px;
+width: 100%;
+text-align: center;
+}
+.container .text-muted {
+margin: 20px 0;
+}
+ 
+.footer > .container {
+padding-right: 15px;
+padding-left: 15px;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.form-recruit{
+  display: inline-block;
+  width: 500px;
+  margin-left: 30px;
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-position{
+display: inline-block;
+  width: 200px;
+  margin-left: 30px;
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.card-header{
+    font-weight:bold;
+}
+
+.select-area{
+    /*margin-left: 50px;*/
+}
+
+.textarea-contents{
+    margin-left: 30px;
+}
+
+/*top.bladeのフォームタグ*/
+.top-form{
+display: inline-block;
+  width: 300px;
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.top-form2{
+ display: inline-block;
+  width: 49%;
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.top-th{
+    display: flex;
+    width:100px !important;
+    font-size: 12px !important;
+    margin-top: 10px;
+}
+
+/*detailブレードのレイアウト*/
+table.detail {
+    border-top: solid 1px #DDD;
+    line-height: 2;
+}
+
+table.detail th {
+    width: 25%;
+    padding: 12px 12px 12px 0;
+    font-size: 12px;
+    font-size: 1.2rem;
+    color: #4A4A4A;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.select-position{
+    margin-left: 50px;
+}
+
+table.detail tr {
+    border-bottom: solid 1px #DDD;
+}
+
+table.login{ /*ログイン画面のメールアドレス・パスワードの高さを揃える*/
+    height:300px;
+    width:100px;
+    display: inline;
+}
+
+html,body{
+    height: 100%;   /* ブラウザ画面の高さをめいっぱいに使用するよ */
+                    /* こうしないと、htmlとbody要素は内包しているコンテンツの部分までしか高さが出ません*/
+}
+
+div#container{
+    position: relative;      /* フッターを位置指定するための基準設定を、まずフッターの親に書くよ */
+    min-height: 100%;        /* 全部囲ってるdiv#containerは、”最低でも”高さ100%（＝ブラウザ画面めいっぱい）にしてね */
+                             /* min-heightは最低限の高さを指定するプロパティ。コンテンツ量が増えれば、高さは伸びるよ */
+    height: auto !important; /* IE6じゃmin-height使えないからIE6専用にこの行と次の行をこう書くよ */
+    height: 100%
+}
+
+div#main{
+    padding-bottom:50px; /* 高さ50pxのフッターだから、その分空けてあげて */
+}
+
+a.navbar-brand{
+    color:#ffffff;
+}
+
+div#navbarSupportedContent{
+    color:#ffffff;
+}
+
+.login-container{
+    height:77%;
+}
+
+/*ユーザー編集画面*/
+.user-container{
+    height: 600px;
+}
+
+.btn-top{
+    width: 100px;
+    color: white;
+    background-color: #55C501;
+    border: solid 2px white;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+.label{
+    display: inline-block;
+    text-align: right;
+    width: 150px;
+}
+
+.label-register{
+    display: inline-block;
+    text-align: right;
+    width: 150px;
+    margin-left: 30px;
+}
+
+.form-register{
+  display: inline-block;
+  width: 500px;
+  margin-left: 30px;
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-birthday{
+  display: inline-block;
+  width: 100px;
+  margin-left: 50px;
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.detail tr > * {
+    border-bottom: solid 1px #DDD;
+}
+
+
+/*ul#main-ul{
+    color:#fff !important;
+}*/
+
+li.nav-item{ /*ヘッダーの文字の大きさ*/
+    font-size:12px;
+}
+
+ol.sub{   /*一覧画面のリスト*/
+    list-style:none;
+    font-size: 15px !important;
+}
+
+.games .detail tr > * {
+    border-bottom: solid 1px #DDD;
+    width:350px;
+    height:40px;
+    text-align: center;
+}
+
+.games .detail th {
+    width:200px;
+}
+
+.recruit-list {
+border-top: solid 1px
+ #DDD;
+}
+
+ul{list-style: none;}
+.recruit-list { border-top: solid 1px #DDD; }
+
+.recruit-list > li { position: relative; padding: 18px 0; border-bottom: solid 1px #DDD; }
+
+.recruit-list > li.none { color: #CCC; }
+
+.recruit-list .new { display: none; }
+
+.recruit-list > li.new_rec .new { display: inline-block; margin: 4px 4px 0 0; padding: 3px; border-radius: 3px; background: #F44A4F; font-size: 10px; font-size: 1rem; color: #FFF; line-height: 1; vertical-align: top; font-weight: normal; }
+
+.recruit-list .admin { display: table; width: 100%; padding: 0; border: none; }
+
+.recruit-list .admin > div { display: table-cell; vertical-align: top; padding: 18px 0; border-bottom: solid 1px #DDD; }
+
+.recruit-list .admin > div.action { width: 1%; padding: 0 0 0 12px; text-align: right; white-space: nowrap; vertical-align: middle; }
+
+.recruit-list .btns { position: absolute; right: 0; bottom: 18px; display: table; width: 166px; }
+
+.recruit-list .btns > li { display: table-cell; width: 80px; }
+
+.recruit-list .btns > li + li { padding-left: 6px; }
+
+.recruit-list .btns a { padding: 9px 0; font-weight: normal; text-shadow: none; }
+
+.recruit-list .tip { display: inline-block; padding: 4px 0; font-size: 13px; font-size: 1.3rem; font-weight: bold; line-height: 1.1; color: #F6A623; }
+
+.recruit-list .tip.approved, .recruit-list .tip.end { color: #4BA66F; }
+
+.recruit-list .tip.stop, .recruit-list .tip.refused { color: #666; }
+
+.recruit-list .tip.red { color: #F44A4F; }
+
+.recruit-list h4 { margin: -4px 0 4px; font-size: 16px; font-size: 1.4rem; line-height: 1.5; font-weight: bold;}
+
+.recruit-list h4 a { color: #000 !important; }
+
+.recruit-list .author { margin: 0 0 8px; font-size: 14px; font-size: 1.4rem; color: #CCC; line-height: 1.43; }
+
+.recruit-list .author img { width: 20px; height: 20px; margin-right: 6px; border-radius: 10px; }
+
+.recruit-list .author .vote { font-size: 12px; font-size: 1.2rem; color: #888; }
+
+.recruit-list .sub { margin: 0 0 12px; font-size: 11px; font-size: 1.1rem; color: #888; line-height: 1.19; }
+
+.recruit-list .sub li + li { margin-top: 4px; }
+
+.arrow-area { display: inline-block; margin-left: 6px; padding-left: 9px; background: url(/labostatic/img/arrow-area.png) no-repeat left; background-size: 3px 5px; }
+
+.recruit-list .status { position: absolute; right: 0; bottom: 16px; display: table; font-size: 10px; font-size: 1rem; line-height: 1.4; font-weight: bold; }
+
+.recruit-list .status > li { display: table-cell; vertical-align: middle; }
+
+.recruit-list .status > li + li { padding-left: 12px; }
+
+.recruit-list .status a { font-size: 10px; font-size: 1rem; font-weight: bold; color: #000 !important; line-height: 1.4; vertical-align: top; }
+
+.recruit-list .tags { overflow: hidden; max-height: 31px; padding-right: 100px; }
+
+.recruit-list .admin .tags { padding-right: 0; }
+
+.recruit-list .other_link { display: inline-block; color: #34945A; line-height: 1; }

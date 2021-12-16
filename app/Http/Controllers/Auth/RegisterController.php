@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use App\Prefecture;
+use App\City;
 
 class RegisterController extends Controller
 {
@@ -28,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/game_list';
 
     /**
      * Create a new controller instance.
@@ -52,6 +55,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'introduction' =>['required', 'string', 'max:500'],
         ]);
     }
 
@@ -61,12 +65,30 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(array $data,Request $request)
     {
+         if ($file = $request->file('img_url')) {
+            $file = $request->file('img_url');
+            $fileName = time() . $file->getClientOriginalName();
+            $target_path = public_path('uploads/');
+            $file->move($target_path, $fileName);
+         } else {
+             $fileName = "";
+         }
+         Log::debug('create_function');
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'birthday'=>$data['birthday'],
+            'area'=>$data['area'],
+            'position1_id'=>$data['position1_id'],
+            'position2_id'=>$data['position2_id'],
+            'position3_id'=>$data['position3_id'],
+            'img_url'=>$fileName,
+            'introduction'=>$data['introduction'],
+            //'team_id'=>$data['team_id'],
         ]);
     }
 }

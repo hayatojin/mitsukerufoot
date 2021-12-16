@@ -1,0 +1,10 @@
+<!--チーム情報登録の完了画面-->
+
+@extends('layouts.layouts')
+@section('content')
+
+<div style="min-height: 100vh;">
+ <h1 style="line-height: 15em;">チーム情報の登録が完了しました！</h1>
+  <a href="{{ action('RecruitmentGameController@show') }}"><button type="submit" class="btn btn-success">トップへ戻る</button></a>
+</div>
+@endsection
