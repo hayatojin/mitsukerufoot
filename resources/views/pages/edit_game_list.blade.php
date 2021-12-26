@@ -17,7 +17,7 @@
   <ol class="sub">
       <li style="font-size: 14px;"><i class="size12 date"></i>開催日：{{$value->game_date}}</li>
       <li style="font-size: 14px;"><i class="size12 date"></i>開催時間：{{$value->game_date}}</li>
-      <li style="font-size: 14px;"><i class="size12 spot"></i>開催エリア：{{$value->prefecture_id}}</li>
+      <li style="font-size: 14px;"><i class="size12 spot"></i>開催エリア：{{$value->prefecture->name}}</li>
   </ol>
   <a href="/game_edit?id={{$value->id}}" class="btn btn-success btn--radius">投稿を編集</a>
 </li>

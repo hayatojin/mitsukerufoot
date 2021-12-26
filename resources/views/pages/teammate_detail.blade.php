@@ -9,41 +9,34 @@
        <tbody>
         <tr>
          <th>タイトル</th>
-           <td class="title">{{$teammate_detail->recruit_title}}</td>
+           <td class="title">{{$teammate_detail[0]->recruit_title}}</td>
         </tr>
         
        <tr>
          <th>チーム名</th>
            <td class="name">
-             {{$team->name}}
-           </td>   
-       </tr>
-       
-       <tr>
-         <th>チームID</th>
-           <td class="team_id">
-             {{$teammate_detail->team_id}}
+             {{$team[0]->name}}
            </td>   
        </tr>
        
        <tr>
          <th>開催場所</th>  
            <td class="prefecture_id">
-             {{$teammate_detail->prefecture_id}}  
+             {{$teammate_detail[0]->prefecture->name}}  
            </td>
        </tr>
         
        <tr>
          <th>募集ポジション</th>  
            <td class="position1_id">
-             {{$teammate_detail->position1_id}}  
+             {{$position[0]->name}}  
            </td>
        </tr>
        
        <tr>
          <th style="height:200px;">募集内容</th>  
            <td class="recruit_contents" style="height:200px;">
-             {{$teammate_detail->recruit_contents}}  
+             {{$teammate_detail[0]->recruit_contents}}  
            </td>
        </tr>
      </tbody>

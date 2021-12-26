@@ -75,7 +75,7 @@ class RegisterController extends Controller
          } else {
              $fileName = "";
          }
-         Log::debug('create_function');
+     //    Log::debug('create_function');
 
         return User::create([
             'name' => $data['name'],

@@ -49,7 +49,28 @@ class RecruitmentGameController extends Controller
     
      //対戦チームの募集記事の一覧
     public function show(Request $request){
-        $game_list = RecruitmentGame::get();
+        $sort=$request->input('sort');
+        switch($sort){
+            case "1":
+                $col_name="created_at";
+                break;
+            
+            case "2":
+                $col_name="game_date";
+                break;
+            
+            default: 
+                $col_name="created_at";
+                break;
+        }
+        
+        $input=$request->all();//if文でチェックするためにリクエストで取得
+        if(array_key_exists('keyword',$input)){
+            $keyword=$request->input('keyword');
+        $game_list = RecruitmentGame::where('title','like',"%$keyword%")->orWhere('contents','like',"%$keyword%")->get();
+        }else{
+        $game_list = RecruitmentGame::orderBy($col_name, "desc")->get();
+        }
         return view('pages.game_list',compact("game_list"));
 }
 
@@ -57,18 +78,20 @@ class RecruitmentGameController extends Controller
  public function edit_list(Request $request){
         $id=Auth::id();
         $game_list = RecruitmentGame::where('user_id',$id)->get();
-        return view('pages.edit_game_list',compact("game_list"));
+        $prefectures = Prefecture::all();
+        return view('pages.edit_game_list',compact("game_list","prefectures"));
 }
 
 //試合の詳細
 public function detail(Request $request){
     $id=$request->input('id');
      $game_detail = RecruitmentGame::where('id',$id)->get();
-     Log::debug('$game_detail="'.$game_detail.'"');
+     //Log::debug('$game_detail="'.$game_detail.'"');
      $team = Team::where('id',$game_detail[0]->team_id)->get();
-     Log::debug('$team="'.$team.'"');
+     //Log::debug('$team="'.$team.'"');
      $user = Auth::user();
-     return view('pages.game_detail',compact("game_detail","team","user"));
+     $prefectures = Prefecture::all();
+     return view('pages.game_detail',compact("game_detail","team","user","prefectures"));
 }
 
 //試合の編集

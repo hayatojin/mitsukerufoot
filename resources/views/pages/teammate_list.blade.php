@@ -11,7 +11,7 @@
        <ol class="sub">
         <li style="font-size: 14px;">タイトル:{{$value->recruit_title}}</li>
         <li style="font-size: 14px;">投稿内容:{{$value->recruit_contents}}</li>
-        <li style="font-size: 14px;">エリア:{{$value->prefecture_id}}</li>
+        <li style="font-size: 14px;">エリア:{{$prefecture[0]->name}}</li>
         </ol>
     <a href="/teammate_detail?id={{$value->id}}" class="btn btn-success btn--radius">詳細をみる</a>
     </li>

@@ -15,11 +15,6 @@
                 <th>チーム名</th>
                 <td class="">{{$team[0]->name}}</td>
             </tr>
-     
-            <tr>
-                <th>チームID</th>
-                <td class="">{{$team[0]->team_id}}</td>
-            </tr>
               
             <tr>
                 <th>募集者</th>
@@ -28,7 +23,7 @@
               
             <tr>
                 <th>開催場所：都道府県</th>
-                <td class="">{{$game_detail[0]->prefecture_id}}</td>
+                <td class="">{{$game_detail[0]->prefecture->name}}</td>
             </tr>
               
             <tr>
@@ -57,7 +52,7 @@
     <div id="modal-content" style="left: 180px; top: 233px; display: none;">
 	  <!-- モーダルウィンドウのコンテンツ開始 -->
 	    <p>以下の連絡先にてメールでやり取りをお願いします</p>
-	      <p>{{$user->email}}</p>
+	      <a href="mailto:address">{{$user->email}}</a>
 	        <p><a id="modal-close" class="button-link">閉じる</a></p>
 	  <!-- モーダルウィンドウのコンテンツ終了 -->
     </div>

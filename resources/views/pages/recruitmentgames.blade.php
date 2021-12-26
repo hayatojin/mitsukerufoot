@@ -34,7 +34,7 @@
                 
                  <div class="form-group">
                      <label class="label">開催エリア：都道府県</label>
-                     <select class="select-area parents select form-recruit" name="prefecture_id" id="prefecture_id">
+                     <select class="select-area parents select form-recruit" name="prefecture_id" id="prefecture_id" value="">
                             @foreach($prefectures as $prefecture)
                                <option value="{{$prefecture->id}}">{{$prefecture->name}}</option>
                             @endforeach
@@ -43,7 +43,7 @@
                 
                 <div class="form-group">
                     <label class="label">開催エリア：市区町村</label>
-                    <select class="select-area children select form-recruit" name="municipalities_id" id="municipalities_id">
+                    <select class="select-area children select form-recruit" name="municipalities_id" id="municipalities_id" value="">
                             @foreach($cities as $city)
                                <option value="{{$city->id}}" data-val="{{$city->prefecture_id}}">{{$city->name}}</option>
                             @endforeach

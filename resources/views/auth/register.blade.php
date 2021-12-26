@@ -147,7 +147,7 @@
                        <div class="form-group row">
                           <label class="label-register">自己紹介</label>
                       
-                                <textarea class="textarea-contents form-register" rows="8" cols="70" value="" style="height:150px;"></textarea>
+                                <textarea class="textarea-contents form-register" rows="8" cols="70" value="" style="height:150px;" name='introduction'></textarea>
                                 @error('introduction')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

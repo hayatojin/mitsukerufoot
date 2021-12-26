@@ -37,9 +37,10 @@ class RecruitmentTeammateController extends Controller
     //チームメイト募集記事の一覧が見れる
     public function show(Request $request){
         $user_id = Auth::id();
-       Log::debug($user_id);
+       //Log::debug($user_id);
         $teammate_list = RecruitmentTeammate::get();
-        return view('pages.teammate_list',compact("teammate_list"));
+        $prefecture = Prefecture::get();
+        return view('pages.teammate_list',compact("teammate_list","prefecture"));
 }
 
 //チームメイト募集記事の編集一覧
@@ -53,11 +54,11 @@ class RecruitmentTeammateController extends Controller
 public function detail(Request $request){
     $id=$request->input('id');
      $teammate_detail = RecruitmentTeammate::where('id',$id)->get();
-     Log::debug($teammate_detail[0]->team_id);
+     Log::debug($teammate_detail[0]);
      $team = Team::where('id',$teammate_detail[0]->team_id)->get();
-    $teammate_detail = $teammate_detail[0];
-    $team = $team[0];
-     return view('pages.teammate_detail',compact("teammate_detail","team"));
+    $prefectures = Prefecture::get();
+    $position = Positon::get();
+     return view('pages.teammate_detail',compact("teammate_detail","team","prefectures","position"));
 }
 
 //募集記事の編集
