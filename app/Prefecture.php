@@ -9,6 +9,6 @@ class Prefecture extends Model
     //hasMany設定
   public function recruitmentgame()
   {
-  return $this->hasMany('App\RecruitmentGame','App\RecruitmentTeammate');
+    return $this->hasMany('App\RecruitmentGame','App\RecruitmentTeammate');
   }
 }

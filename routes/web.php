@@ -114,3 +114,5 @@ Route::post('/password/change', 'Auth\ChangePasswordController@ChangePassword')-
 //会員登録フォームの都道府県セレクト
 Route::get('pref/ajax','RecruitmentGameController@ajax');
 
+Route::get('/logout','Auth\LoginController@logout');
+

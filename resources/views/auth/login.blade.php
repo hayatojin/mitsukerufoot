@@ -2,10 +2,10 @@
  
 @section('content')
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-<div class="login-container">
+<div class="login-container" style="min-height: 100vh;">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="margin-top:100px">
                 <div class="card-header">ログイン</div>
  
                 <div class="card-body">

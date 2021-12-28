@@ -26,7 +26,7 @@
                 </tr>
                 <tr class="top-tr">
                     <th class="top-th"></th>
-                    <td><a href="/game_list" class="top-form2 btn btn--orange">ログイン</a>
+                    <td><a href="/login" class="top-form2 btn btn--orange">ログイン</a>
                     <a href="/register" class="top-form2 btn btn--orange">会員登録</a></td>
                 </tr>
             </table>

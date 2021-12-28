@@ -100,7 +100,7 @@
                         
                      <!--第二ポジション-->
                         <div class="form-group row">
-                          <label class="label-register">第二ポジション(任意)</label>
+                          <label class="label-register">第二ポジション</label>
                                 <select class="select-position select form-register" name="position2_id" style="width: 200px;">
                                     <option value="1">CF</option>
                                     <option value="2">ST</option>
@@ -121,7 +121,7 @@
                         
                         <!--第三ポジション-->
                         <div class="form-group row">
-                          <label class="label-register">第三ポジション(任意)</label>
+                          <label class="label-register">第三ポジション</label>
                       
                             <div class="">
                                 <select class="select-position select form-register" name="position3_id" style="width: 200px;">
