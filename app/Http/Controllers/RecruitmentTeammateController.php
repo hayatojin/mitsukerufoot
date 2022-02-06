@@ -41,7 +41,7 @@ class RecruitmentTeammateController extends Controller
             $keyword=$request->input('keyword');
         $teammate_list = RecruitmentTeammate::where('recruit_title','like',"%$keyword%")->orWhere('recruit_contents','like',"%$keyword%")->get();
         }else{
-        $teammate_list = RecruitmentTeammate::orderBy("desc")->get();
+        $teammate_list = RecruitmentTeammate::orderBy('created_at', 'desc')->get();
         }
         $prefecture = Prefecture::get();
         $position = Positon::get();

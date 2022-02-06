@@ -11,6 +11,8 @@
     <div class="col-7">
         <h1 class="text-white"><b>Hello football players！</b></h1>
         <p class="text-white"><br>みつけるフットボールでは、対戦チームやサッカー仲間を手軽にみつけることができます！<br>理想の対戦チーム、チームメイトを探してみませんか？</p>
+        <img src='{{ asset('storage/team2.png') }}' class="team-img">
+        <img src='{{ asset('storage/teammate2.png') }}' class="teammate-img">
     </div>
     <div class="col-5" style="padding-top:100px;">
         <form method="POST" style="margin-top:unset;" action="{{ route('login') }}">
@@ -26,11 +28,12 @@
                 </tr>
                 <tr class="top-tr">
                     <th class="top-th"></th>
-                    <td><a href="/login" class="top-form2 btn btn--orange">ログイン</a>
+                    <td><button type="submit" class="top-form2 btn btn--orange">ログイン</button>
                     <a href="/register" class="top-form2 btn btn--orange">会員登録</a></td>
                 </tr>
             </table>
         </form>
+        <img src='{{ asset('storage/stadium.png') }}' class="stadium-img">
     </div>
 </div>
 @else

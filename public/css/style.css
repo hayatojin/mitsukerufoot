@@ -359,6 +359,20 @@ a.btn--orange:hover {
   font-weight: bold;
 }
 
+/*トップ画面のアイコン画像*/
+.team-img{
+    margin-top: 90px;
+}
+
+.teammate-img{
+    margin-top: 90px;
+    margin-left: 120px;
+}
+
+.stadium-img{
+    margin-top: 60px;
+    margin-left: 120px;
+}
 
 /*ul#main-ul{
     color:#fff !important;
